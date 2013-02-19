@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="23" version="2.0">
+<workbench progressCount="42" version="2.0">
 <workbenchAdvisor/>
-<window height="768" width="1200" x="166" y="0">
-<fastViewData fastViewLocation="1024"/>
+<window height="766" maximized="true" width="1364" x="38" y="-20">
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.eclipse.ui.navigator.ProjectExplorer"/>
+<orientation position="512" view="com.aptana.terminal.views.terminal"/>
+<orientation position="512" view="com.aptana.explorer.view"/>
+<orientation position="512" view="com.aptana.ui.io.remoteview"/>
+</fastViewData>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.python.pydev.navigate.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="137" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="168" y="22"/>
@@ -17,6 +23,15 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.editor.css" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.js" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.sass" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.yaml" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="84" y="22"/>
+<coolItem id="com.aptana.editor.html" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.erb.html" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.ruby" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -25,47 +40,38 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+<viewState CommonNavigator.LINKING_ENABLED="1" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="com.aptana.snippets.ui.views.SnippetsView" partName="Snippets"/>
-<view id="com.aptana.terminal.views.terminal" partName="Terminal"/>
-<view id="com.aptana.samples.ui.SamplesView" partName="Samples"/>
-<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<view id="com.aptana.terminal.views.terminal" partName="Terminal">
+<viewState>
+<title>Terminal</title>
+<workingDirectory>C:\Sites\sample_app</workingDirectory>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.priorityField="30" org.eclipse.ui.ide.resourceField="90"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
-<view id="com.aptana.explorer.view" partName="App Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="blog">
-<project name="blog">
-<selection>
-<element path="/blog"/>
-</selection>
-</project>
-</viewState>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 </views>
-<perspectives activePart="com.aptana.explorer.view" activePerspective="com.aptana.ui.WebPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="com.aptana.ui.WebPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -96,6 +102,7 @@
 <show_view_action id="org.eclipse.ui.views.ProblemView"/>
 <show_view_action id="org.eclipse.ui.views.TaskList"/>
 <show_view_action id="com.aptana.webserver.ui.view"/>
+<show_in_time id="org.eclipse.ui.navigator.ProjectExplorer" time="1357399050770"/>
 <new_wizard_action id="com.aptana.editor.php.NewPHPProjectWizard"/>
 <new_wizard_action id="com.aptana.ui.wizards.NewWebProject"/>
 <new_wizard_action id="com.aptana.ruby.core.ui.rubyProjectWizard"/>
@@ -105,26 +112,33 @@
 <new_wizard_action id="org.radrails.rails.ui.projectWizard"/>
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="com.aptana.explorer.view"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="com.aptana.terminal.views.terminal"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="com.aptana.samples.ui.SamplesView"/>
-<view id="com.aptana.snippets.ui.views.SnippetsView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.20618556"/>
+<view id="com.aptana.terminal.views.terminal" ratio="0.6259205"/>
+</fastViews>
 <fastViewBars/>
 <layout>
 <mainWindow>
-<info folder="true" part="left">
-<folder activePageID="com.aptana.explorer.view" appearance="2" expanded="2">
-<page content="com.aptana.explorer.view" label="App Explorer"/>
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@cd030f">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@62c054" ratio="0.73333335" ratioLeft="484" ratioRight="176" relationship="4" relative="org.eclipse.ui.internal.ViewStack@cd030f">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.terminal.views.terminal:13c0d1a0dd5" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="left" ratio="0.24886878" ratioLeft="165" ratioRight="498" relationship="4" relative="org.eclipse.ui.internal.ViewStack@cd030f">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.explorer.view" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="882" ratioRight="294" relationship="2" relative="left">
@@ -132,33 +146,81 @@
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.19982994" ratioLeft="235" ratioRight="941" relationship="2" relative="left"/>
-<info folder="true" part="terminalArea" ratio="0.75" ratioLeft="507" ratioRight="169" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.25830257" ratioLeft="350" ratioRight="1005" relationship="2" relative="left"/>
+<info folder="true" part="terminalArea" ratio="0.5318182" ratioLeft="351" ratioRight="309" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.terminal.views.terminal:13c074f6f0f" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c0719f8b8" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:models" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c06edd38b" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:app" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf79536b8" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf7a81237" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf2f5143e" label="LabelNotFound"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView:Console View #1" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf2f3690f" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf353ad9a" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf39f6b98" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf3a0cace" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bf7a8bbb6" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bfdc6832c" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bfdc6f585" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c05f06073" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:stylesheets" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:layouts" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c06d3aa1f" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c06e4384f" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@16d8b4e" ratio="0.75" ratioLeft="495" ratioRight="165" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="com.aptana.terminal.views.terminal" label="Terminal"/>
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="com.aptana.terminal.views.terminal:sample_app" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c25ad2517" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c110a5f3e" label="LabelNotFound"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13bef565095" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c05f21a67" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:users" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c1c904561" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@a84b47" ratio="0.75" ratioLeft="507" ratioRight="169" relationship="4" relative="left">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="com.aptana.samples.ui.SamplesView" label="Samples"/>
-<page content="com.aptana.snippets.ui.views.SnippetsView" label="Snippets"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@12decb0" ratio="0.7076023" ratioLeft="242" ratioRight="100" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.terminal.views.terminal:13c0702b4e3" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b4f98" ratio="0.7409091" ratioLeft="489" ratioRight="171" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.terminal.views.terminal:requests" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:controllers" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c10204e6e" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c10208450" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c1039e5a1" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c1059a170" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:13c10a8d6da" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@a84b47" ratio="0.74242425" ratioLeft="490" ratioRight="170" relationship="4" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="com.aptana.samples.ui.SamplesView" label="LabelNotFound"/>
+<page content="com.aptana.snippets.ui.views.SnippetsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -172,12 +234,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@a84b47"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -185,9 +241,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="terminalArea"/>
 </trimArea>
 </trimLayout>
 </window>
-<mruList/>
+<mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.ruby" name="teste.rb" tooltip="C:\Sites\livros_e_cursos\teste.rb">
+<persistable uri="file:/C:/Sites/livros_e_cursos/teste.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="users_controller.rb" tooltip="sample_app/app/controllers/users_controller.rb">
+<persistable path="/sample_app/app/controllers/users_controller.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="application.html.erb" tooltip="sample_app/app/views/layouts/application.html.erb">
+<persistable path="/sample_app/app/views/layouts/application.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="spec_helper.rb" tooltip="sample_app/spec/spec_helper.rb">
+<persistable path="/sample_app/spec/spec_helper.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="factories.rb" tooltip="sample_app/spec/factories.rb">
+<persistable path="/sample_app/spec/factories.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_shim.html.erb" tooltip="sample_app/app/views/layouts/_shim.html.erb">
+<persistable path="/sample_app/app/views/layouts/_shim.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_header.html.erb" tooltip="sample_app/app/views/layouts/_header.html.erb">
+<persistable path="/sample_app/app/views/layouts/_header.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_footer.html.erb" tooltip="sample_app/app/views/layouts/_footer.html.erb">
+<persistable path="/sample_app/app/views/layouts/_footer.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.sass" name="users.css.scss" tooltip="sample_app/app/assets/stylesheets/users.css.scss">
+<persistable path="/sample_app/app/assets/stylesheets/users.css.scss"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.sass" name="static_pages.css.scss" tooltip="sample_app/app/assets/stylesheets/static_pages.css.scss">
+<persistable path="/sample_app/app/assets/stylesheets/static_pages.css.scss"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.sass" name="sessions.css.scss" tooltip="sample_app/app/assets/stylesheets/sessions.css.scss">
+<persistable path="/sample_app/app/assets/stylesheets/sessions.css.scss"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.sass" name="custom.css.scss" tooltip="sample_app/app/assets/stylesheets/custom.css.scss">
+<persistable path="/sample_app/app/assets/stylesheets/custom.css.scss"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.css" name="application.css" tooltip="sample_app/app/assets/stylesheets/application.css">
+<persistable path="/sample_app/app/assets/stylesheets/application.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="static_pages_controller.rb" tooltip="sample_app/app/controllers/static_pages_controller.rb">
+<persistable path="/sample_app/app/controllers/static_pages_controller.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="sessions_controller.rb" tooltip="sample_app/app/controllers/sessions_controller.rb">
+<persistable path="/sample_app/app/controllers/sessions_controller.rb"/>
+</file>
+</mruList>
 </workbench>
