@@ -4,9 +4,13 @@
 # programa que gera a classe dao
 #
 # pega e testa os argumentos
+
+require 'fileutils'
+
 arquivo_base_name = ARGV[0]
+nome_app = ARGV[1]
 if arquivo_base_name.nil?
-  puts "Arquivo nao existe"
+  puts "Arquivo nao informado"
   exit
 end
 
@@ -23,7 +27,8 @@ nome_tabela = classe[0].strip.downcase
 nome_prefix = nome_tabela.capitalize
 nome_dicionario = nome_prefix + "Dic"
 nome_classe = nome_prefix + "DAO"
-nome_pacote = "br.inf.intelidata." + nome_tabela
+nome_pacote = "br.inf.intelidata." + nome_app
+
 
 
 #
@@ -43,8 +48,7 @@ while linha = arquivo_base.gets do
   end
 end
 
-
-java = File.new( "src_" + nome_pacote + "_" + nome_classe + ".java", "w+")
+java = File.new( "src/#{nome_pacote}/#{nome_classe}.java", "w+")
 java.puts('package ' + nome_pacote + ';')
 java.puts('import java.util.Map;')
 java.puts('import android.content.ContentValues;')
