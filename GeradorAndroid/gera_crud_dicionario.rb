@@ -44,13 +44,16 @@ class GeraCrudDicionario
     java.puts('    private static final String TIPO_NULL = " null";')
     java.puts('    private static final String TIPO_REAL = " real";')
     java.puts('    private static final String TIPO_BLOB = " blob";')
+    java.puts('    private static final String OR = " OR ";')
+    java.puts('    private static final String LIKE = " LIKE value ";')
     java.puts('    private static final String VIRGULA = ",";')
     java.puts('    //')
     java.puts('    public static final String TABELA_NOME = "' + nome_tabela + '";')
     java.puts('    public static final String ID = "_id";')
     java.puts('    //')
 
-    sql_insert =  '    ID  + " integer primary key autoincrement" + '
+    sql_insert = '    ID  + " integer primary key autoincrement" + '
+    sql_query  = ''
 
     while linha = arquivo_base.gets do
 
@@ -67,6 +70,11 @@ class GeraCrudDicionario
       end
 
       sql_insert += "VIRGULA + \n\t\t#{nome_campo.upcase} + #{nome_tipos[tipo_campo ]} + "
+      if sql_query == ''
+         sql_query  = "#{nome_campo.upcase} + LIKE"
+      else
+         sql_query += " + OR + #{nome_campo.upcase} + LIKE"
+      end
 
       java.puts('    public static final String ' + nome_campo.upcase + '= "' + nome_campo.downcase + '";')
       #
@@ -78,6 +86,8 @@ class GeraCrudDicionario
 
     end
     #
+    java.puts('    //')
+    java.puts("    public static final String SQL_QUERY = #{sql_query};")
     java.puts('    //')
     java.puts('    public static final String SQL_CRIA_TABELA = "CREATE TABLE " + TABELA_NOME + " (" + ')
     java.puts('    ' + sql_insert + '" )";' )

@@ -44,7 +44,7 @@ class GeraCrudDAO
       if campos[1].strip == ''
         next
       end
-      lista_campos +=  ",\n\t\t#{nome_dic}.#{campos[0].strip.upcase}"
+      lista_campos +=  ",\n\t\t\t#{nome_dic}.#{campos[0].strip.upcase}"
     end
 
     java = File.new( "src/#{nome_pacote}/#{nome_classe}.java", "w+")
@@ -106,11 +106,19 @@ class GeraCrudDAO
     java.puts(' ')
     java.puts('    //')
     java.puts('    //')
-    java.puts('    public Cursor listaTodos() {')
+    java.puts('    public Cursor listaTodos(String query) {')
+    java.puts('        String value = "%" + query + "%";')
     java.puts('        this.db = dbHelper.getReadableDatabase();')
-    java.puts('        return db.query('  + nome_dic + '.TABELA_NOME,')
-    java.puts('        new String[] { ' + lista_campos + '},')
-    java.puts('        null, null, null, null, null);')
+    java.puts('        if (query.isEmpty()) {')
+    java.puts("            return db.query(#{nome_dic}.TABELA_NOME,")
+    java.puts("            new String[] {#{lista_campos}},")
+    java.puts('            null, null, null, null, null, null);')
+    java.puts('        } else {')
+    java.puts('            return db.query('  + nome_dic + '.TABELA_NOME,')
+    java.puts("            new String[] {#{lista_campos}},")
+    java.puts("            #{nome_dic}.SQL_QUERY,")
+    java.puts('            null, null, null, null, null);')
+    java.puts('        }')
     java.puts('    }')
     java.puts(' ')
     java.puts('    //')
