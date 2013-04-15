@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cliente_codigo_label">Codigo</string>
+    <string name="cliente_codigo_hint">Codigo</string>
+    <string name="cliente_nome_label">Nome</string>
+    <string name="cliente_nome_hint">Nome</string>
+    <string name="cliente_cnpj_label">CNPJ</string>
+    <string name="cliente_cnpj_hint">CNPJ</string>
+    <string name="cliente_email_label">e-mail</string>
+    <string name="cliente_email_hint">e-mail</string>
+    <string name="cliente_salvar_label">Salvar</string>
+</resources>

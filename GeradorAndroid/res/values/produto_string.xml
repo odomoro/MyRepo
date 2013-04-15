@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="produto_codigo_label">Codigo</string>
+    <string name="produto_codigo_hint">Codigo EAN</string>
+    <string name="produto_nome_label">Nome</string>
+    <string name="produto_nome_hint">Nome</string>
+    <string name="produto_modelo_label">Modelo</string>
+    <string name="produto_modelo_hint">Modelo</string>
+    <string name="produto_preco_label">Preco</string>
+    <string name="produto_preco_hint">Preco</string>
+    <string name="produto_salvar_label">Salvar</string>
+</resources>

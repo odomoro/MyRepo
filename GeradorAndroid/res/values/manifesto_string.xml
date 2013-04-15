@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cliente_app_titulo">Cliente</string>
+    <string name="produto_app_titulo">Produto</string>
+    <string name="titulo_sobre">Sobre</string>
+</resources>

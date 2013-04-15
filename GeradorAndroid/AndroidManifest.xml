@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.inf.intelidata.appteste"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <application
+        android:theme="@style/Theme.D1"
+        android:icon="@drawable/icon"
+        android:label="@string/appteste">
+        <activity android:name=".Appteste"
+            android:label="@string/appteste">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ClienteLST"
+            android:theme="@style/Theme.D1"
+            android:label="@string/cliente_app_titulo"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        /activity>
+        <activity android:name="ProdutoLST"
+            android:theme="@style/Theme.D1"
+            android:label="@string/produto_app_titulo"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        /activity>
+        <activity android:name=".AboutActivity"
+            android:theme="@style/Theme.D1"
+            android:label="@string/titulo_sobre"
+        /activity>
+
+    </application>
+    <uses-sdk android:minSdkVersion="8" />
+</manifest>

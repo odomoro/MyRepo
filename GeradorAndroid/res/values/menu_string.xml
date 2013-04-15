@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_incluir">Incluir</string>
+    <string name="menu_alterar">Alterar</string>
+    <string name="menu_apagar">Excluir</string>
+    <string name="lista_vazia">Sem informacoes</string>
+    <string name="menu_alterar_apagar">Acoes</string>
+    <string name="pesquisa_label">Pesquisa</string>
+    <string name="pesquisa_hint">Pesquisa</string>
+</resources>

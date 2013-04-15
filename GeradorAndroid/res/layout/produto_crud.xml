@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent">
+   <TableLayout android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <TableRow>
+            <TextView android:text="@string/produto_codigo_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/codigo_edit_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="@string/produto_codigo_hint"
+                android:InputType="Text"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/produto_nome_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/nome_edit_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="@string/produto_nome_hint"
+                android:InputType="Text"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/produto_modelo_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/modelo_edit_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="@string/produto_modelo_hint"
+                android:InputType="Text"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/produto_preco_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/preco_edit_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:hint="@string/produto_preco_hint"
+                android:InputType="Text"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <Button android:id="@+id/salvar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="salvarOnClick"
+                android:text="@string/produto_salvar_label"/>
+        </TableRow>
+   </TableLayout>
+</ScrollView>

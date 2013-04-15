@@ -1,0 +1,8 @@
+#     0     #     1    #      2        #         3        #      4      #      5      #   6     #      7
+# NomeCampo # Tipo SQL # Label         # Hint             # Tipo objeto # Complemento # Outros  # Coluna da lista
+#-----------------------------------------------------------------------------------------------------------------
+Codigo      , S        , Codigo        , Codigo           , E           , Text        ,         , 1
+Nome        , S        , Nome          , Nome             , E           , Text        ,         , 2
+CNPJ        , S        , CNPJ          , CNPJ             , E           , Text
+email       , S        , e-mail        , e-mail           , E           , Text
+Salvar      ,          , Salvar        , Salvar           , B
